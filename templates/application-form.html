@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>Application Form
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
+    </head>
+<body class="bg-info">
+    <br>
+    <div class="container">
+    <div class="media">
+        <div class="media-left">
+            <img src="https://www.authenticjobs.com/assets/images/authentic-jobs/jobs.v1492800829.svg" class="media-object" style="width:50px">
+        </div>
+    <div class="media-body">
+    <h1 class="media-heading">Job Application</h1>
+    </div>
+    <br>
+    <p id="instruction">Please fill out the form below as best you can. We would like to hear about you and see what you're looking for.</p>
+    </div>
+</div>
+    <div class="container">
+        <form action="/application-success" method="post"><br>
+        First Name: <input type="text" name="fname"><br><br>
+        Last Name: <input type="text" name="lname"><br><br>
+        Salary Requirements: (numbers only)<input type="text" name="salary"><br><br>
+        Job You Are Applying to:
+        <select name="choice"
+        <ul>
+            {% for job in jobs %}
+            <li>
+                <option value="{{ job }}"> {{ job }} </option>
+            </li>
+            {% endfor %}
+        </ul>
+        </select>
+        <br><br>
+        <a href="/application-success" class="btn btn-info" role="button">Submit Your Form</a><br>
+        </form>
+        </div>
+    </body>
+</html>
