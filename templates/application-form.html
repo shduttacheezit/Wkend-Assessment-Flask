@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
     </head>
 <body class="bg-info">
     <br>
@@ -28,20 +27,20 @@
         <form action="/application-success" method="post"><br>
         First Name: <input type="text" name="fname"><br><br>
         Last Name: <input type="text" name="lname"><br><br>
-        Salary Requirements: (numbers only)<input type="text" name="salary"><br><br>
+        Salary Requirements: (numbers only)
+        <input type="text" name="salary"><br><br>
         Job You Are Applying to:
-        <select name="choice"
-        <ul>
+        <select name="choice">
             {% for job in jobs %}
-            <li>
                 <option value="{{ job }}"> {{ job }} </option>
-            </li>
             {% endfor %}
-        </ul>
         </select>
         <br><br>
-        <a href="/application-success" class="btn btn-info" role="button">Submit Your Form</a><br>
+        <input type="submit" <a href="/application-success" class="btn btn-info" role="button"></a>
+        <br>
         </form>
         </div>
     </body>
+    {% block footer %}
+    {% endblock footer %}
 </html>

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="http://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
-    <h1>Ubermelon</h1>
-    {% block content %}BODY CONTENT GOES HERE{% endblock %}
-    <footer>Copyright 2015 Ubermelon</footer>
+{% block content %}
+<body class="bg-info">
+    <div class="container">
+    <div class="media">
+        <div class="media-left">
+            <img src="https://www.authenticjobs.com/assets/images/authentic-jobs/jobs.v1492800829.svg" class="media-object" style="width:50px">
+        </div>
+    <div class="media-body">
+    <h1 class="media-heading"> *~*~*~ </h1>
+    The place where you can find your new life.
+    </div>
+{% endblock %}
+{% block footer %} <footer>Copyright 2017 Shilper Dutter</footer> {% endblock %}
 </body>
 </html>
